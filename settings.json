@@ -7,13 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "terminal": {
+    "font_size": 15.0,
+    "font_family": "D2Coding",
+  },
   "icon_theme": "Catppuccin Frappé",
   "minimap": {
     "show": "always",
   },
   "disable_ai": false,
-  "ui_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_family": "D2Coding ligature",
+  "buffer_font_family": "D2Coding",
+  "buffer_font_fallbacks": ["D2Coding"],
+  "language_models": {
+    "anthropic": {
+      "api_url": "https://api.minimax.io/anthropic",
+      "available_models": [
+        {
+          "name": "Minimax-M2.1",
+          "max_tokens": 3000000,
+        },
+      ],
+    },
+  },
   "agent": {
     // "model_parameters": [],
     "default_profile": "ask",
@@ -42,11 +58,11 @@
   },
   "vim_mode": true,
   "ui_font_size": 15.0,
-  "buffer_font_size": 14.0,
+  "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
     "light": "Rosé Pine Moon",
-    "dark": "One Dark",
+    "dark": "Gruvbox Dark",
   },
   "edit_predictions": {
     "disabled_globs": [
