@@ -1,0 +1,69 @@
+{
+    "window.commandCenter": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "d"],
+            "after": ["d", "d"]
+        },
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["lineBreakInsert"],
+            "silent": true
+        },
+        {
+            "before": ["<C-c>"],
+            "commands": ["editor.action.clipboardCopyAction"]
+        },
+        {
+            "before": ["<C-v>"],
+            "commands": ["editor.action.clipboardPasteAction"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["J"],
+            "commands": ["editor.action.moveLinesDownAction"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        },
+        {
+            "before": ["<C-[>"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["<C-]>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<C-c>"],
+            "commands": ["editor.action.clipboardCopyAction"]
+        }
+    ],  
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-c>": false,
+        "<C-v>": false
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    }
+}
