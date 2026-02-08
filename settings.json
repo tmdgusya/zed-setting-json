@@ -7,27 +7,39 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_line_height": "comfortable",
+  "inlay_hints": {
+    "show_value_hints": false,
+  },
+  "inline_code_actions": false,
   "terminal": {
-    "font_size": 15.0,
-    "font_family": "D2Coding",
+    "font_size": 18.0,
+    "font_family": "Iosevka",
   },
   "icon_theme": "Catppuccin Frappé",
   "minimap": {
     "show": "always",
   },
   "disable_ai": false,
-  "ui_font_family": "D2Coding ligature",
-  "buffer_font_family": "D2Coding",
-  "buffer_font_fallbacks": ["D2Coding"],
-  "language_models": {
-    "anthropic": {
-      "api_url": "https://api.minimax.io/anthropic",
-      "available_models": [
-        {
-          "name": "Minimax-M2.1",
-          "max_tokens": 3000000,
-        },
-      ],
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "font_style": "normal",
+      },
+    },
+  },
+  "ui_font_family": "Iosevka",
+  "buffer_font_family": "Iosevka",
+  "buffer_font_fallbacks": ["JetBrainsMono Nerd Font Mono"],
+  "agent_servers": {
+    "opencode": {
+      "type": "registry",
+    },
+    "Kimi Code CLI": {
+      "type": "custom",
+      "command": "kimi",
+      "args": ["acp"],
+      "env": {},
     },
   },
   "agent": {
@@ -39,8 +51,8 @@
       "model": "claude-sonnet-4-5",
     },
     "default_model": {
-      "provider": "zed.dev",
-      "model": "gemini-3-pro-preview",
+      "provider": "anthropic",
+      "model": "Minimax-M2.1",
     },
   },
   "languages": {
@@ -53,18 +65,16 @@
       "language_servers": ["gopls"],
     },
   },
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "vim_mode": true,
-  "ui_font_size": 15.0,
-  "buffer_font_size": 15.0,
+  "ui_font_size": 18.0,
+  "buffer_font_size": 18.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Rosé Pine Moon",
-    "dark": "Gruvbox Dark",
+    "dark": "Evergarden Fall (Hybrid)",
   },
   "edit_predictions": {
+    "provider": "zed",
     "disabled_globs": [
       "**/.env*",
       "**/*.pem",
